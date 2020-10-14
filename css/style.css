@@ -116,6 +116,7 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -149,6 +150,7 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.142;
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -157,6 +159,7 @@ ul {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -224,7 +227,7 @@ ul {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background-color: #fff;
+  background-color: var(button-white-color);
 }
 .btn-svg {
   vertical-align: middle;
@@ -238,7 +241,7 @@ ul {
   right: 8px;
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: var(button-white-color);
   border: solid 1px rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
@@ -248,7 +251,7 @@ ul {
   position: absolute;
   bottom: 0;
   background-color: rgba(47, 48, 58, 0.8);
-  color: #ffffff;
+  color: var(button-white-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -413,6 +416,7 @@ ul {
   height: 44px;
   border-radius: 50%;
   background-color: var(--button-white-color);
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -426,6 +430,7 @@ ul {
   width: 20px;
   height: 20px;
   fill: var(--fill-color-svg);
+  transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -495,8 +500,6 @@ ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-partner .link {
   display: inline-flex;
@@ -508,6 +511,7 @@ ul {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+  transition-property: border, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -525,9 +529,6 @@ ul {
 
   box-sizing: border-box;
   border-radius: 4px;
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients {
   padding-top: 94px;
@@ -562,6 +563,7 @@ ul {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   margin-right: 11px;
+  transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -639,6 +641,7 @@ footer {
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: var(--adress-text-color);
+  transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -659,6 +662,7 @@ footer {
   letter-spacing: 0.03em;
   border: 0px;
   border-radius: 4px;
+  transition-property: box-shadow, color, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -698,31 +702,10 @@ footer {
 .button2:focus {
   color: var(--button-white-color);
   background: var(--button-back-color);
-}
-.button2::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  z-index: -1;
-  opacity: 0;
-
-  border-radius: 4px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 3px 1px rgba(0, 0, 0, 0.1);
+    0px 4px 1px rgba(0, 0, 0, 0.1);
+}
 
-  transition-property: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button2:hover::after,
-.button2:focus::after {
-  opacity: 1;
-}
 .portfolio-border {
   border-bottom: 1px solid #ececec;
 }
@@ -732,6 +715,7 @@ footer {
 }
 .flex-elements {
   display: block;
+  transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
